@@ -15,7 +15,7 @@
  @import "bootstrap";
 
  body {
-   width: 90%;
+   width: 85%;
    padding-top: 10px;
    margin: auto;
  }
@@ -42,16 +42,16 @@
     margin: 0;
     font-weight: bold;
    }
-   .nav-item-list{
+   .nav-item-list {
     margin-left: 5px;
     display: inline-block;
    }
-   .nav-item{
+   .nav-item {
      color: black;
      margin-left: 2px;
      font-size: 13px;
    }
-   .nav-item:hover{
+   .nav-item:hover {
     text-decoration: none;
   }
   span {
@@ -59,6 +59,39 @@
   }
  }
 
- .list-container{
+ .list-container {
   background: #f6f6ef;
+
+  h1 {
+    margin: 0;
+    display: inline-block;
+    font-size: 10pt;
+    color: #828282;
+    font-weight: normal;
+    margin: 8px;
+  }
+  h2 {
+    margin: 0;
+    display: inline-block;
+    color: black;
+    font-size: 10pt;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  h3 {
+    margin: 0;
+    display: inline-block;
+    font-size: 8pt;
+    color: #828282;
+    font-weight: normal;
+  }
+  h4 {
+    margin: 0;
+    font-size: 7pt;
+    color: #828282;
+    font-weight: normal;
+    position: relative;
+    top: -5px;
+    left: 31px;
+  }
  }
