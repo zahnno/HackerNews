@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
     url = 'https://hacker-news.firebaseio.com/v0/'
+    website = 'https://news.ycombinator.com/'
     response = HTTParty.get(url + 'topstories.json')
     response = response.parsed_response
     @itemsList = []
@@ -9,6 +10,7 @@ class ItemsController < ApplicationController
       listItem = listItem.parsed_response
       listItem['shortUrl'] = parseHostUrl(listItem['url'])
       listItem['timeDifference'] = Time.at(listItem['time'])
+      listItem['commentUrl'] = website + 'item?id=' + item.to_s
       @itemsList.push(listItem);
     }
   end
