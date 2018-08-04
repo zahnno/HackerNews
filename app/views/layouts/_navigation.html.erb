@@ -1,24 +1,17 @@
-
-<nav class="navbar navbar-default">
-<div class="container-fluid">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <%= link_to 'Items', root_path, class: 'navbar-brand' %>
+<div class="topNav">
+  <%= link_to '/' do %>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Y_Combinator_logo.svg" alt="" class="logo">
+    <h4>Hacker News</h4>
+  <% end %>
+  <div class="nav-item-list">
+    <%= link_to 'new', '/', class: 'nav-item' %>
+    <span>|</span>
+    <%= link_to 'comments', '/', class: 'nav-item' %>
+    <span>|</span>
+    <%= link_to 'show', '/', class: 'nav-item' %>
+    <span>|</span>
+    <%= link_to 'ask', '/', class: 'nav-item' %>
+    <span>|</span>
+    <%= link_to 'jobs', '/', class: 'nav-item' %>
   </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-    </ul>
-
-    <ul class="nav navbar-nav navbar-right">
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
-</nav>
+</div>

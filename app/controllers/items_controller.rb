@@ -4,12 +4,16 @@ class ItemsController < ApplicationController
     response = HTTParty.get(url + 'topstories.json')
     response = response.parsed_response
     @items = []
-    response[0...4].each { | item | 
-      toBeStaged = HTTParty.get(url + 'item/' + item.to_s + '.json')
-      toBeStaged = toBeStaged.parsed_response
-      @items.push(toBeStaged);
+    response[0...2].each { | item | 
+      listItem = HTTParty.get(url + 'item/' + item.to_s + '.json')
+      listItem = listItem.parsed_response
+      listItem['shortUrl'] = parseHostUrl(listItem['url'])
+      listItem['timeDifference'] = Time.at(listItem['time'])
+      @items.push(listItem);
     }
   end
-end
 
-# https://hacker-news.firebaseio.com/v0/item/17685358.json
+  def parseHostUrl(url)
+    return URI.parse(url).host;
+  end
+end
