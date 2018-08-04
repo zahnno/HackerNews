@@ -2,7 +2,7 @@ require 'faraday'
 require 'json'
 
 class Connection
-  BASE = ' https://hacker-news.firebaseio.com/v0/'
+  BASE = 'https://hacker-news.firebaseio.com/v0/'
 
   def self.api
     Faraday.new(url: BASE) do |faraday|
