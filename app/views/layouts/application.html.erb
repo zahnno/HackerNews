@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HackerNews</title>
+    <title>Hacker News</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Y_Combinator_logo.svg" type="favicon/ico" />
+    <%= favicon_link_tag  asset_path('hacknew.png'), :rel=> 'icon', :type => 'image/png' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
